@@ -112,6 +112,8 @@ main {
     display: flex;
     align-items: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -141,6 +143,30 @@ main {
     flex-wrap: wrap;
 }
 
+.mascot {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+
+.mascot--hero {
+    position: absolute;
+    right: 6%;
+    bottom: -12px;
+    max-width: 320px;
+    opacity: 0.95;
+    pointer-events: none;
+}
+
+.mascot--side {
+    max-width: 240px;
+}
+
+.mascot--contact {
+    max-width: 220px;
+}
+
 .section {
     padding: 80px 0;
 }
@@ -152,6 +178,18 @@ main {
 .section-title {
     font-size: clamp(2rem, 3vw, 2.7rem);
     margin-bottom: 1rem;
+}
+
+.highlights-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.highlights-header .section-title {
+    margin-bottom: 0;
 }
 
 .eyebrow {
@@ -314,6 +352,17 @@ main {
     padding: 140px 0 80px;
 }
 
+.banner-products .banner-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+.banner-products .banner-text {
+    max-width: 680px;
+}
+
 .banner-dark {
     background: var(--green-dark);
     color: #fff;
@@ -399,6 +448,20 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     align-items: start;
+}
+
+.contact-mascot {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.mascot-caption {
+    margin: 0;
+    font-weight: 600;
+    color: var(--green-dark);
 }
 
 .contact-form {
@@ -556,6 +619,11 @@ main {
     .hero {
         min-height: 78vh;
     }
+
+    .mascot--hero {
+        max-width: 280px;
+        right: 4%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -609,6 +677,7 @@ main {
     .hero {
         min-height: 70vh;
         padding: 3.5rem 0;
+        flex-direction: column;
     }
 
     .hero-logo {
@@ -623,12 +692,37 @@ main {
         font-size: 1rem;
     }
 
+    .mascot--hero {
+        position: static;
+        margin: 2rem auto 0;
+        max-width: 220px;
+        opacity: 0.9;
+    }
+
+    .highlights-header {
+        grid-template-columns: 1fr;
+        margin-bottom: 1.5rem;
+    }
+
+    .highlights-header .mascot--side {
+        margin-top: 0.5rem;
+    }
+
     .section {
         padding: 64px 0;
     }
 
     .banner {
         padding: 120px 0 60px;
+    }
+
+    .banner-products .banner-content {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .banner-products .mascot--side {
+        margin: 1.5rem auto 0;
     }
 
     .two-column {
@@ -657,6 +751,11 @@ main {
     .newsletter-form input,
     .newsletter-form .btn {
         width: 100%;
+    }
+
+    .contact-mascot {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .video-wrapper iframe,
@@ -697,6 +796,10 @@ main {
         flex-direction: column;
     }
 
+    .mascot--hero {
+        display: none;
+    }
+
     .btn {
         width: 100%;
     }
@@ -717,6 +820,11 @@ main {
     .inner-nav a {
         text-align: center;
         width: 100%;
+    }
+
+    .mascot--side,
+    .mascot--contact {
+        max-width: 180px;
     }
 
     .whatsapp-float {
