@@ -65,6 +65,10 @@ main {
     height: 52px;
 }
 
+.logo-invert {
+    content: url("https://assets.zyrosite.com/vTXf2RFqtY2lNkGX/logo-branca-FZfUUPduWIEokzx7.png");
+}
+
 .nav-menu ul {
     list-style: none;
     display: flex;
