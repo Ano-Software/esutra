@@ -433,21 +433,20 @@ main {
     bottom: 24px;
     width: 56px;
     height: 56px;
-    border-radius: 50%;
+    border-radius: 999px;
     background: #25d366;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.05em;
+    display: grid;
+    place-items: center;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     z-index: 1100;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.whatsapp-float span {
-    line-height: 1;
+.whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 .whatsapp-float:hover {
@@ -478,21 +477,54 @@ main {
     max-width: 150px;
 }
 
-.footer-social .social-links {
+.social-icons {
     display: flex;
-    gap: 0.5rem;
+    gap: 12px;
+    align-items: center;
 }
 
-.social-links a {
-    display: inline-flex;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    color: #222;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    border-color: transparent;
+}
+
+.social-icon:focus-visible {
+    outline: 3px solid rgba(27, 94, 32, 0.25);
+    outline-offset: 3px;
+}
+
+.site-footer .social-icon {
     background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.35);
     color: #fff;
-    font-weight: 600;
+}
+
+.site-footer .social-icon:hover {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.25);
+}
+
+.site-footer .social-icon:focus-visible {
+    outline-color: rgba(255, 255, 255, 0.45);
 }
 
 .footer-copy {
@@ -645,7 +677,7 @@ main {
         text-align: center;
     }
 
-    .footer-social .social-links {
+    .social-icons {
         justify-content: center;
     }
 }
@@ -692,7 +724,6 @@ main {
         bottom: 16px;
         width: 52px;
         height: 52px;
-        font-size: 16px;
     }
 }
 
