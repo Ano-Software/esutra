@@ -423,6 +423,39 @@ main {
     box-shadow: var(--shadow);
 }
 
+.whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+}
+
+.whatsapp-float span {
+    line-height: 1;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.24);
+}
+
+.whatsapp-float:focus-visible {
+    outline: 3px solid rgba(37, 211, 102, 0.4);
+    outline-offset: 4px;
+}
+
 .site-footer {
     background: var(--green-dark);
     color: #fff;
@@ -534,6 +567,14 @@ main {
     .video-wrapper iframe,
     .video-embed iframe {
         height: 220px;
+    }
+
+    .whatsapp-float {
+        right: 16px;
+        bottom: 16px;
+        width: 52px;
+        height: 52px;
+        font-size: 16px;
     }
 }
 
