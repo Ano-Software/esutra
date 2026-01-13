@@ -9,14 +9,14 @@
 
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 820) {
+                if (window.innerWidth <= 768) {
                     navMenu.classList.remove('open');
                 }
             });
         });
 
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 820) {
+            if (window.innerWidth > 768) {
                 navMenu.classList.remove('open');
             }
         });
